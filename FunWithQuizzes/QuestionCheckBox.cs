@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FunWithQuizzes
 {
-    class QuestionCheckbox : Question
+    class QuestionCheckBox : Question
     {
         public string CorrectAnswer { get; set; }
         public override bool IsCorrect()
@@ -49,7 +49,7 @@ namespace FunWithQuizzes
             return HashCode.Combine(QuestionText, AnswerChoices, CorrectAnswer);
         }
 
-        public QuestionCheckbox(string questionText,
+        public QuestionCheckBox(string questionText,
             List<string> answerChoices, string correctAnswer)
             : base(questionText, answerChoices)
         {

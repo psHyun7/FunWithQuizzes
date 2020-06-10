@@ -9,15 +9,17 @@ namespace FunWithQuizzes
         static void Main(string[] args)
         {
             QuestionTrueFalse question1 = new QuestionTrueFalse("Polar Bears are White", "T");
-            QuestionMultipleChoice question2 = new QuestionMultipleChoice("Which of the following colos are primary colors?",);
-            Quiz quiz1 = new Quiz;
-            Question question1
+            QuestionCheckBox question2 = new QuestionCheckBox("Which of the following colos are primary colors?", new List<string> { "a: Blue", "b: Red", "c: Green", "d: Yellow" }, "abd");
+            QuestionMultipleChoice question3 = new QuestionMultipleChoice("Why did you take this quiz?", new List<string> { "a: Bored", "b: Just Because", "c: LaunchCode", "d: Huh?" }, "c");
+            Quiz quiz1 = new Quiz();
+            quiz1.AddQuestion(question1);
+            quiz1.AddQuestion(question2);
+            quiz1.AddQuestion(question3);
 
-            "what type of question is this? 1:TrueFalse, 2:Checkbox, 3:MultipleChoice";
-            if ()
-            Console.WriteLine("Add a New Question")
-            quConsole.ReadLine()
-            quiz1.AddQuestion()
+            quiz1.ConductTest();
+            Console.WriteLine("\nThat Concludes the World's Easiest Test! \n");
+            double grade = quiz1.GradeQuiz();
+            Console.WriteLine($"You've Got {grade * 100}%!!");
         }
     }
 }
