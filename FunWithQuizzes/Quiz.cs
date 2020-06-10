@@ -6,7 +6,11 @@ namespace FunWithQuizzes
 {
     class Quiz
     {
-        public List<Question> Questions { get; set; }
+        private List<Question> Questions = new List<Question>();
+        public List<Question> questions
+        {
+            get { return Questions; }
+        }
         public double Grade { get; set; }
         private string Introduction = "Welcome to the world's easiest quiz: \n";
 
@@ -41,7 +45,7 @@ namespace FunWithQuizzes
             Console.WriteLine(Introduction);
             foreach (Question question in Questions)
             {
-                Console.WriteLine("Question #" + i + ":\n " + question.ToString());
+                Console.WriteLine("\nQuestion #" + i + ":\n" + question.ToString());
                 question.UserAnswer = Console.ReadLine();
                 
                 i++;
@@ -49,7 +53,7 @@ namespace FunWithQuizzes
         }
         public double GradeQuiz()
         {
-            int numCorrect = 0;
+            double numCorrect = 0;
             foreach (Question question in Questions)
             {
                 if (question.IsCorrect())
@@ -59,6 +63,6 @@ namespace FunWithQuizzes
             }
             Grade = numCorrect / Questions.Count;
             return Grade;
-        }
+         }
     }
 }

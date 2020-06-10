@@ -15,7 +15,7 @@ namespace FunWithQuizzes
             char[] UserAnswerArr = UserAnswer.ToCharArray();
             char[] CorrectAnswerArr = CorrectAnswer.ToCharArray();
             Array.Sort(UserAnswerArr);
-            if (UserAnswerArr == CorrectAnswerArr)
+            if (UserAnswerArr.SequenceEqual(CorrectAnswerArr))
             {
                 return true;
             }

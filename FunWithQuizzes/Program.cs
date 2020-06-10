@@ -9,8 +9,8 @@ namespace FunWithQuizzes
         static void Main(string[] args)
         {
             QuestionTrueFalse question1 = new QuestionTrueFalse("Polar Bears are White", "T");
-            QuestionCheckBox question2 = new QuestionCheckBox("Which of the following colos are primary colors?", new List<string> { "a: Blue", "b: Red", "c: Green", "d: Yellow" }, "abd");
-            QuestionMultipleChoice question3 = new QuestionMultipleChoice("Why did you take this quiz?", new List<string> { "a: Bored", "b: Just Because", "c: LaunchCode", "d: Huh?" }, "c");
+            QuestionCheckBox question2 = new QuestionCheckBox("Which of the following colos are primary colors?", new List<string> { "a: Blue", "b: Red", "c: Green", "d: Yellow" }, "ABD");
+            QuestionMultipleChoice question3 = new QuestionMultipleChoice("Why did you take this quiz?", new List<string> { "a: Bored", "b: Just Because", "c: LaunchCode", "d: Huh?" }, "C");
             Quiz quiz1 = new Quiz();
             quiz1.AddQuestion(question1);
             quiz1.AddQuestion(question2);
